@@ -1,0 +1,8 @@
+[user]
+    name = Sergio Ruiz	
+    email = sejoruiz@gmail.com
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+    interactive = auto

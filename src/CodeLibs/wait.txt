@@ -1,0 +1,17 @@
+void wait(unsigned long delay)
+{
+unsigned long now, timeout;
+
+  now=timerTicks;
+  timeout=now+(4*delay); //Scale to ms
+  if(timeout>now ) //Check for wrap around;
+	while( timerTicks < timeout )
+      ;
+  else
+  {
+    while( timerTicks > 0 )	//Wait for wrap around
+	  ;
+	while( timerTicks < timeout )  //Wait for timeout
+      ;
+  }
+}

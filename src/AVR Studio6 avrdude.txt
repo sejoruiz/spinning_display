@@ -1,0 +1,6 @@
+Go to: Tools -> External Tools...
+
+Title: AVRDude
+Command: avrdude.exe
+Arguments: -p m644p -c avr109 -b 4800 -U flash:w:"$(ItemFileName).hex"
+Initial directory: $(ProjectDir)/Debug
